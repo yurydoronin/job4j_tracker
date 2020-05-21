@@ -45,13 +45,13 @@ public class UpdateItem extends BaseAction {
         Item itemOld = tracker.findById(input.ask("Please, provide the item's ID: "));
         String name = input.ask("Please, provide the new name: ");
         String desc = input.ask("Please, provide the new description: ");
-        Item item = new Item(name, desc, LocalDateTime.now());
-        tracker.replace(itemOld.getId(), item);
-        output.accept("------------ The edited item -----------");
-        output.accept(String.format("%s, %s, %s, ID: %s",
-                item.getName(),
-                item.getDesc(),
-                item.getTime().format(DateTimeFormatter.ofPattern("yyyy/MM/dd hh:mm:ss")),
-                item.getId()));
+//        Item item = new Item(name, desc, LocalDateTime.now());
+//        tracker.replace(itemOld.getId(), item);
+//        output.accept("------------ The edited item -----------");
+//        output.accept(String.format("%s, %s, %s, ID: %s",
+//                item.getName(),
+//                item.getDesc(),
+//                item.getTime().format(DateTimeFormatter.ofPattern("yyyy/MM/dd hh:mm:ss")),
+//                item.getId()));
     }
 }

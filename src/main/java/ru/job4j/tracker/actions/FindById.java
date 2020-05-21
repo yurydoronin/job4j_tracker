@@ -41,15 +41,15 @@ public class FindById extends BaseAction {
     @Override
     public void execute(Input input, ITracker tracker) {
         Item item = tracker.findById(input.ask("Please, provide the item's ID: "));
-        if (item != null) {
-            output.accept(
-                    String.format("%s, %s, %s, ID: %s",
-                            item.getName(),
-                            item.getDesc(),
-                            item.getTime().format(DateTimeFormatter.ofPattern("yyyy/MM/dd hh:mm:ss")),
-                            item.getId()));
-        } else {
-            output.accept("------------ The Item has NOT been found ------------");
-        }
+//        if (item != null) {
+//            output.accept(
+//                    String.format("%s, %s, %s, ID: %s",
+//                            item.getName(),
+//                            item.getDesc(),
+//                            item.getTime().format(DateTimeFormatter.ofPattern("yyyy/MM/dd hh:mm:ss")),
+//                            item.getId()));
+//        } else {
+//            output.accept("------------ The Item has NOT been found ------------");
+//        }
     }
 }

@@ -24,7 +24,7 @@ public class Tracker implements ITracker {
      * @param item, a new item.
      */
     public Item add(Item item) {
-        item.setId(this.generateId());
+//        item.setId(this.generateId());
         this.items.add(item);
         return item;
     }
@@ -50,7 +50,7 @@ public class Tracker implements ITracker {
         for (int index = 0; index != items.size(); index++) {
             if (this.items.get(index).getId().equals(id)) {
                 this.items.set(index, item);
-                item.setId(id);
+//                item.setId(id);
                 result = true;
                 break;
             }

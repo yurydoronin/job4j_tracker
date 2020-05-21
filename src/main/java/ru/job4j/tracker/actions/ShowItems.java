@@ -40,13 +40,13 @@ public class ShowItems extends BaseAction {
      */
     @Override
     public void execute(Input input, ITracker tracker) {
-        for (Item item : tracker.getAll()) {
-            output.accept(
-                    String.format("%s, %s, %s, ID: %s",
-                            item.getName(),
-                            item.getDesc(),
-                            item.getTime().format(DateTimeFormatter.ofPattern("yyyy/MM/dd hh:mm:ss")),
-                            item.getId()));
-        }
+//        for (Item item : tracker.getAll()) {
+//            output.accept(
+//                    String.format("%s, %s, %s, ID: %s",
+//                            item.getName(),
+//                            item.getDesc(),
+//                            item.getTime().format(DateTimeFormatter.ofPattern("yyyy/MM/dd hh:mm:ss")),
+//                            item.getId()));
+//        }
     }
 }

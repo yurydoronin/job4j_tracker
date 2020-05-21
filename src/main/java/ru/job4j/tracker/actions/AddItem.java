@@ -43,10 +43,10 @@ public class AddItem extends BaseAction {
         output.accept("------------ Adding new item ------------");
         String name = input.ask("Please, provide the item's name: ");
         String desc = input.ask("Please, provide the item's description: ");
-        Item item = new Item(name, desc, LocalDateTime.now());
-        tracker.add(item);
-        System.out.println("------------ New Item with ID : " + item.getId());
-        System.out.println("------------ New Item with Name : " + item.getName());
-        System.out.println("------------ New Item with Description : " + item.getDesc());
+//        Item item = new Item(name, desc, LocalDateTime.now());
+//        tracker.add(item);
+//        System.out.println("------------ New Item with ID : " + item.getId());
+//        System.out.println("------------ New Item with Name : " + item.getName());
+//        System.out.println("------------ New Item with Description : " + item.getDesc());
     }
 }

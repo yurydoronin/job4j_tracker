@@ -43,20 +43,20 @@ public class FindByName extends BaseAction {
     public void execute(Input input, ITracker tracker) {
         List<Item> items = tracker.findByName(input.ask("Please, provide the item's name: "));
         boolean found = false;
-        for (Item item : items) {
-            if (item != null) {
-                output.accept(
-                        String.format("%s, %s, %s, ID: %s",
-                                item.getName(),
-                                item.getDesc(),
-                                item.getTime().format(DateTimeFormatter.ofPattern("yyyy/MM/dd hh:mm:ss")),
-                                item.getId()));
-                found = true;
-                break;
-            }
-        }
-        if (!found) {
-            output.accept("------------ The Item has NOT been found ------------");
-        }
+//        for (Item item : items) {
+//            if (item != null) {
+//                output.accept(
+//                        String.format("%s, %s, %s, ID: %s",
+//                                item.getName(),
+//                                item.getDesc(),
+//                                item.getTime().format(DateTimeFormatter.ofPattern("yyyy/MM/dd hh:mm:ss")),
+//                                item.getId()));
+//                found = true;
+//                break;
+//            }
+//        }
+//        if (!found) {
+//            output.accept("------------ The Item has NOT been found ------------");
+//        }
     }
 }

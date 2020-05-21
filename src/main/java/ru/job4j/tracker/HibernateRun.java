@@ -8,7 +8,10 @@ import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.List;
+import java.util.Objects;
 
 /**
  * Class HibernateRun.
@@ -23,9 +26,16 @@ public class HibernateRun {
 
     private static SessionFactory sf;
 
+    private static final Path PATH;
+
+    static {
+        PATH = Paths.get(Objects.requireNonNull(
+                HibernateRun.class.getClassLoader().getResourceAsStream("hibernate.cfg.xml")).toString());
+    }
+
     protected static void setUp() {
         final StandardServiceRegistry registry = new StandardServiceRegistryBuilder()
-                .configure().build();
+                .configure(PATH.toFile()).build();
         try {
             sf = new MetadataSources(registry).buildMetadata().buildSessionFactory();
         } catch (Exception e) {
